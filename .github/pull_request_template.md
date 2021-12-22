@@ -12,9 +12,9 @@ Check before asking for review:
   - [ ] [README.md](/README.md) (if needed)
   - [ ] [docs](/docs) directory (if needed)
   - [ ] any other (if needed)
-- [ ] I have increased [VERSION](/VERSION) according to guideline
+- [ ] I have increased [VERSION](/VERSION) according to [guideline](/docs/guideline.md#Versioning)
 - [ ] I have fixed any technical debt I bumped into or created at least an issue (if needed)
-- [ ] I have checked that my code is according to guideline
+- [ ] I have checked that my code is according to [guideline](/docs/guideline.md)
 - [ ] I have done myself a review
 
 ### Reviewer
@@ -26,7 +26,7 @@ Check before merge:
   - [ ] [README.md](/README.md) (if needed)
   - [ ] [docs](/docs) directory (if needed)
   - [ ] any other (if needed)
-- [ ] [VERSION](/VERSION) have been increased according to guideline
+- [ ] [VERSION](/VERSION) have been increased according to [guideline](/docs/guideline.md#Versioning)
 - [ ] Any related technical debt has been fixed or an issue has been created (if needed)
-- [ ] Code is according to guideline
+- [ ] Code is according to [guideline](/docs/guideline.md)
 - [ ] Code is nice, functional and ready to be merged
