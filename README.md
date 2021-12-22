@@ -15,7 +15,9 @@ but I also use tools like [Google Keep](https://www.google.com/keep/), [Google D
 [diagrams.net](https://www.diagrams.net/) and so on. 
 
 ## Development instructions
-### <Guideline>
+### Guideline
+To guarantee a good quality and condition of the project there are certain principles and customs it is recommended to
+follow. Please read them in a [guideline](/docs/guideline.md) before you start developing.  
 
 ### Initial setup
 1) create and activate [virtual environment](https://pypi.org/project/virtualenv/)
