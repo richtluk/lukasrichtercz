@@ -7,6 +7,9 @@ max-complexity=10
 [tool.pylint.'FORMAT']
 max-line-length=120
 
+[tool.pytest.ini_options]
+addopts = "--verbose"
+
 [tool.poetry]
 name = "lukasrichtercz"
 version = "0.1.0"
