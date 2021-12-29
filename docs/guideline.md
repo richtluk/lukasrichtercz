@@ -105,6 +105,13 @@ There is a [PR template](/.github/pull_request_template.md) which should be alwa
 The template contains further instructions which should be followed and a PR checklist which should be always checked
 before review (requestor part) and before merge (reviewer part).
 
+#### Merge
+Always merge new commits using rebase (["Rebase and merge"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#rebase-and-merge-your-pull-request-commits) option).
+
+Always delete source branch.
+
+**Tip:** If you need to pull `master` branch after merge pull with [rebase](#Rebase). 
+
 ## Code
 Keep your code simple, readable and self-explanatory if possible.
 
