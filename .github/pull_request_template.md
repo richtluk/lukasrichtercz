@@ -21,7 +21,6 @@ Check before asking for review:
 Check before merge:
 - [ ] There is a related issue and its id is in PR title (or this is tiny PR or something very urgent)
 - [ ] PR fulfills issue (or task in general) description (or differs reasonably)
-- [ ] The code seems trustworthy
 - [ ] Tests have been added or updated (if needed)
 - [ ] Documentation has been added or updated (if needed)
   - [ ] [README.md](/README.md) (if needed)
