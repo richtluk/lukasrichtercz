@@ -69,6 +69,11 @@ can be rebased into:
 - `Add README.md`
 - `Add pre-commit`
 
+**Tip:** If you need to pull `master` branch into your branch do a rebase:
+```bash
+git pull origin master --rebase
+```
+
 ### Pull requests
 Every pull request (PR) should be reasonably long and complex. It is a good practice not to mix unrelated changes but if you
 bump into small technical debt or some errors feel free to fix them as part of your PR.
