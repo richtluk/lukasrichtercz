@@ -21,30 +21,30 @@ follow. Please read them in a [guideline](/docs/guideline.md) before you start d
 
 ### Initial setup
 1) create and activate [virtual environment](https://pypi.org/project/virtualenv/)
-```commandline
+```bash
 virtualenv venv
 source venv/bin/activate
 ```
 2) install dependencies
-```commandline
+```bash
 poetry install
 ```
 3) set up git hooks by pre-commit
-```commandline
+```bash
 pre-commit install
 ```
 ### Application run
-```commandline
+```bash
 # there is nothing to run at the moment
 ```
 
 ### Testing
-```commandline
+```bash
 # there is nothing to test at the moment
 ```
 
 ### Deployment
-```commandline
+```bash
 # there is nothing to deploy at the moment
 ```
 
