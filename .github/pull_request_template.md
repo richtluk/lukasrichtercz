@@ -26,7 +26,7 @@ Check before merge:
   - [ ] [README.md](/README.md) (if needed)
   - [ ] [docs](/docs) directory (if needed)
   - [ ] any other (if needed)
-- [ ] [VERSION](/VERSION) have been increased according to [guideline](/docs/guideline.md#Versioning)
+- [ ] [VERSION](/VERSION) has been increased according to [guideline](/docs/guideline.md#Versioning)
 - [ ] Any related technical debt has been fixed or an issue has been created (if needed)
 - [ ] Code is according to [guideline](/docs/guideline.md)
 - [ ] Code is nice, functional and ready to be merged
