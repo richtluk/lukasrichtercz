@@ -69,6 +69,7 @@ can be rebased into:
 - `Add README.md`
 - `Add pre-commit`
 
+**Tip:** Before you get confident with `git rebase` rather backup your repository before any changes.  
 **Tip:** If you need to pull `master` branch into your branch do a rebase:
 ```bash
 git pull origin master --rebase
