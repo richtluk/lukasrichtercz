@@ -1,7 +1,7 @@
 # lukasrichtercz 👨
 This is my personal website project.
   
-You can see it running at [lukasrichter.cz](https://www.lukasrichter.cz).
+You can see it running at [www.lukasrichter.cz](https://www.lukasrichter.cz).
 
 ## Technical info
 It is running in a [Docker](https://docs.docker.com/get-started/overview/) container provided by [roští.cz](https://rosti.cz/).
