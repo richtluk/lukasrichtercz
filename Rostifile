@@ -1,0 +1,46 @@
+# https://docs.rosti.cz/cs/quickstart/rostictl/#podrobne-o-rostifile
+name: lukasrichtercz
+technology: python
+https: true
+domains:
+  - www.lukasrichter.cz
+  - lukasrichter.cz
+  - www.lukas-richter.cz
+  - lukas-richter.cz
+  - lukasrichtercz-5203.rostiapp.cz
+source_path: .
+plan: mini
+runtime: rosti/runtime:2021.09-1
+processes:
+  - name: nginx
+    command: /usr/sbin/nginx -g "daemon off;"
+  - name: app
+    command: /srv/venv/bin/gunicorn -u app -g app -b 0.0.0.0:8080 --access-logfile -
+      --error-logfile - --reload app.app
+before_commands:
+  - supervisorctl stop nginx
+  - supervisorctl stop app
+after_commands:
+  - # update nginx files
+  - rm -rf /srv/conf/nginx.d && mv /srv/app/nginx /srv/conf/nginx.d
+  - # install poetry dependencies
+  - /srv/venv/bin/pip install poetry
+  - /srv/venv/bin/poetry config virtualenvs.create false
+  - /srv/venv/bin/poetry config installer.parallel false
+  - cd /srv/app && /srv/venv/bin/poetry install --no-dev
+  - # start
+  - supervisorctl start app
+  - supervisorctl start nginx
+exclude:
+  # Warning: 'include' is not supported so be careful not to upload anything unwanted what is not in this list!
+  - .git
+  - .github
+  - .gitignore
+  - .idea
+  - .pre-commit-config.yaml
+  - .rosti.state
+  - docs
+  - LICENSE
+  - README.md
+  - Rostifile
+  - venv
