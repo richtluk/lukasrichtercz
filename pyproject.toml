@@ -7,6 +7,12 @@ max-complexity=10
 [tool.pylint.'FORMAT']
 max-line-length=120
 
+[tool.pylint.'MESSAGES CONTROL']
+disable='''missing-class-docstring,
+    missing-function-docstring,
+    missing-module-docstring,
+'''
+
 [tool.pytest.ini_options]
 addopts = "--verbose"
 
@@ -19,6 +25,8 @@ license = "MIT License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+bottle = "^0.12.19"
+pylint = "^2.12.2"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.16.0"

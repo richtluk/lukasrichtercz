@@ -154,7 +154,8 @@ TODO comments may be useful but should be used with care and not overused:
 | **Other TODOs**                                                                           | YES           | YES          | Any other TODO should be related to a YouTrack issue and issue should be mentioned right in the TODO.                                                                          |
 
 ## Versioning
-Version should be increased with every pull request according to [Semantic versioning](https://semver.org/) rules.
+Version should be increased manually with every pull request according to [Semantic versioning](https://semver.org/) rules.
+Version tag will be created automatically by GitHub CI after merge.
 
 ## Maintenance
 To maintain long-term good condition of the project do regularly update of:

@@ -1,7 +1,7 @@
 # lukasrichtercz 👨
 This is my personal website project.
   
-You can see it running at [lukasrichter.cz](https://www.lukasrichter.cz).
+You can see it running at [www.lukasrichter.cz](https://www.lukasrichter.cz).
 
 ## Technical info
 It is running in a [Docker](https://docs.docker.com/get-started/overview/) container provided by [roští.cz](https://rosti.cz/).
@@ -33,9 +33,16 @@ poetry install
 ```bash
 pre-commit install
 ```
+4) install [`rostictl`](https://docs.rosti.cz/cs/quickstart/rostictl/#instalace) (for deployment and production status)
+
 ### Application run
 ```bash
-# there is nothing to run at the moment
+python -c "from app.app import application; application.run()"
+```
+
+Then you can visit website at:
+```
+http://localhost:8080
 ```
 
 ### Testing
@@ -44,8 +51,49 @@ pre-commit install
 ```
 
 ### Deployment
+Deployment is defined by [Rostifile](/Rostifile) and can be done by [`rostictl`](https://docs.rosti.cz/cs/quickstart/rostictl) tool.
+
+**Note:** It requires an access token which you can get from [Roští administration](https://admin.rosti.cz/settings/profile/regenerate-token).  
+**Warning:** It is not possible to pick what files should be uploaded only which should not be so be careful about
+not uploading anything unwanted.
+
 ```bash
-# there is nothing to deploy at the moment
+rostictl up
+```
+
+## Troubleshooting
+In case of any unknown troubles with the application it might be convenient to do some checks.
+
+### Website itself
+[www.lukasrichter.cz](https://www.lukasrichter.cz)
+
+### Application status
+```bash
+rostictl status
+```
+
+### Roští administration
+- [info](https://admin.rosti.cz/1491/apps/detail/5203/)
+- [graphs](https://admin.rosti.cz/1491/apps/graphs/5203/)
+- [services](https://admin.rosti.cz/1491/apps/services/5203/)
+
+### Container
+```bash
+ssh -p 25203 app@node-18.rosti.cz  # requires SSH key
+```
+
+```bash
+# logs
+cd log
+tail *
+
+# resources
+free -h
+df -h
+
+# services & processes
+supervisorctl status
+htop
 ```
 
 ## License
