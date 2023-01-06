@@ -10,7 +10,7 @@ domains:
   - lukasrichtercz-5203.rostiapp.cz
 source_path: .
 plan: mini
-runtime: rosti/runtime:2021.09-1
+runtime: rosti/runtime:2022.12-1
 processes:
   - name: nginx
     command: /usr/sbin/nginx -g "daemon off;"
