@@ -79,7 +79,7 @@ rostictl status
 
 ### Container
 ```bash
-ssh -p 25203 app@node-18.rosti.cz  # requires SSH key
+ssh app@ssh.rosti.cz -p 25203  # requires SSH key
 ```
 
 ```bash
