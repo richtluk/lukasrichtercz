@@ -1,23 +1,15 @@
+import os.path
+import pathlib
+
 import bottle
+
+
+STATIC_DIRECTORY = os.path.join(pathlib.Path(__file__).parent.resolve(), "static")
 
 
 @bottle.route("/")
 def home():
-    return """
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Lukáš Richter</title>
-</head>
-<body>
-<h1>Vítejte na stránce www.lukasrichter.cz!</h1>
-<p>Tato stránka je právě v procesu vývoje.</p>
-<p>Zkuste prosím přijít později.</p>
-<p>Děkuji.</p>
-</body>
-</html>
-"""
+    return bottle.static_file("wip.html", root=STATIC_DIRECTORY)
 
 
 application = bottle.default_app()
