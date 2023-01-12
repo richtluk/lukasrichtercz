@@ -1,0 +1,6 @@
+web:
+  image: nginx
+  volumes:
+    - ./app/static:/usr/share/nginx/html:ro
+  ports:
+    - "127.0.0.1:8080:80"  # "127.0.0.1" to not expose the port outside the machine
