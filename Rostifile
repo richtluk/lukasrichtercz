@@ -39,8 +39,11 @@ exclude:
   - .idea
   - .pre-commit-config.yaml
   - .rosti.state
+  - __pycache__
   - docs
   - LICENSE
+  - local
+  - Makefile
   - README.md
   - Rostifile
-  - venv
+  - templates

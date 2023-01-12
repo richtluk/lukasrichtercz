@@ -25,7 +25,6 @@ license = "MIT License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-bottle = "^0.12.19"
 pylint = "^2.12.2"
 
 [tool.poetry.dev-dependencies]
