@@ -44,3 +44,5 @@ exclude:
   - README.md
   - Rostifile
   - venv
+  - __pycache__
+  - templates
