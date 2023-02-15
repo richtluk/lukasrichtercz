@@ -16,6 +16,9 @@ ps:
 
 # === Production ===
 
+deploy_nginx:
+	scp -P 25203 nginx/app.conf app@ssh.rosti.cz:/srv/conf/nginx.d/app.conf & ssh app@ssh.rosti.cz -p 25203 'supervisorctl restart nginx'
+
 deploy:
 	rostictl up
 
