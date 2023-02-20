@@ -1,5 +1,11 @@
 DOCKER_COMPOSE_CMD = docker-compose -f docker-compose-local.yml
 
+# Roští ssh - requires SSH key
+ROSTI_SSH_PORT = 25203
+ROSTI_SSH_USER = app
+ROSTI_SSH_HOSTNAME = ssh.rosti.cz
+ROSTI_SSH = ssh ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME} -p ${ROSTI_SSH_PORT}
+
 # === Local ===
 
 run:
@@ -19,8 +25,15 @@ ps:
 deploy:
 	rostictl up
 
+deploy_nginx:
+	scp -P ${ROSTI_SSH_PORT} nginx/app.conf ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/conf/nginx.d/app.conf & \
+	${ROSTI_SSH} 'supervisorctl restart nginx'
+
+deploy_index:
+	scp -P ${ROSTI_SSH_PORT} app/static/index.html ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/app/app/static/index.html
+
 status:
 	rostictl status
 
 ssh:
-	ssh app@ssh.rosti.cz -p 25203  # requires SSH key
+	${ROSTI_SSH}
