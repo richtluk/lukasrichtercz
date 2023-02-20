@@ -21,8 +21,12 @@ before_commands:
   - supervisorctl stop nginx
   - supervisorctl stop app
 after_commands:
+  - # update supervisor
+  - rm -rf /srv/conf/supervisor.d && mv /srv/app/conf/supervisor.d /srv/conf
+  - supervisorctl reread
+  - supervisorctl update
   - # update nginx files
-  - rm -rf /srv/conf/nginx.d && mv /srv/app/nginx /srv/conf/nginx.d
+  - rm -rf /srv/conf/nginx.d && mv /srv/app/conf/nginx /srv/conf/nginx.d
   - # install poetry dependencies
   - /srv/venv/bin/pip install poetry
   - /srv/venv/bin/poetry config virtualenvs.create false

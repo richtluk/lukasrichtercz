@@ -26,7 +26,7 @@ deploy:
 	rostictl up
 
 deploy_nginx:
-	scp -P ${ROSTI_SSH_PORT} nginx/app.conf ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/conf/nginx.d/app.conf & \
+	scp -P ${ROSTI_SSH_PORT} conf/nginx/app.conf ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/conf/nginx.d/app.conf & \
 	${ROSTI_SSH} 'supervisorctl restart nginx'
 
 deploy_index:
