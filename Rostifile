@@ -22,7 +22,7 @@ before_commands:
   - supervisorctl stop app
 after_commands:
   - # update supervisor
-  - rm -rf /srv/conf/supervisor.d && mv /srv/app/conf/supervisor.d /srv/conf
+  - rm -rf /srv/conf/supervisor.d && mv /srv/app/conf/supervisor /srv/conf/supervisor.d
   - supervisorctl reread
   - supervisorctl update
   - # update nginx files
