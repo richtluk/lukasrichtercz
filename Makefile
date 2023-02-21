@@ -36,6 +36,9 @@ deploy_supervisor_nginx:
 	scp -P ${ROSTI_SSH_PORT} conf/supervisor/nginx.conf ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/conf/supervisor.d/nginx.conf & \
 	${ROSTI_SSH} 'supervisorctl reread & supervisorctl update'
 
+download_logs:
+	scp -P ${ROSTI_SSH_PORT} -r ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:~/log local
+
 status:
 	rostictl status
 
