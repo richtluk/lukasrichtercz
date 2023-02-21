@@ -32,6 +32,10 @@ deploy_nginx:
 deploy_index:
 	scp -P ${ROSTI_SSH_PORT} app/static/index.html ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/app/app/static/index.html
 
+deploy_supervisor_nginx:
+	scp -P ${ROSTI_SSH_PORT} conf/supervisor/nginx.conf ${ROSTI_SSH_USER}@${ROSTI_SSH_HOSTNAME}:/srv/conf/supervisor.d/nginx.conf & \
+	${ROSTI_SSH} 'supervisorctl reread & supervisorctl update'
+
 status:
 	rostictl status
 
