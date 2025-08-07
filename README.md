@@ -1,3 +1,6 @@
+> **Warning:** This site currently serves only my **personal landing page**.  
+> The original website is **temporarily suspended** and will be **updated in the future**.
+
 # lukasrichtercz 👨
 This is my personal website project.
   
